@@ -63,11 +63,11 @@ body:has(.card[data-color="green"]:hover) {
   }
 
   .info-box {
-    @apply mx-5 relative flex text-white flex-col gap-3 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
+    @apply mx-6 relative flex text-white flex-col gap-2 max-w-2xl neo-brutalism-blue pt-4 pb-12 px-8;
   }
 
   .neo-btn {
-    @apply py-3 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
+    @apply pt-3 pb-1 px-6 rounded-lg text-blue-500 text-center font-semibold sm:w-1/2 w-[90%] -bottom-5 absolute mx-auto right-0 left-0 flex justify-center items-center gap-3;
   }
 
   .cta {
@@ -167,12 +167,17 @@ body:has(.card[data-color="green"]:hover) {
 
 /* Neo Brutalism */
 .neo-brutalism-blue {
-  background: #2b77e7;
+  background: rgba(43, 119, 231, 0.7);
   position: relative;
-  border-radius: 10px;
-  border: #2b77e7;
-  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
-    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 
+              0 6px 6px rgba(0, 0, 0, 0.5), 
+              0 0 40px rgba(0, 146, 219, 0.5), 
+              0 0 80px rgba(0, 146, 219, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  @apply rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105;
 }
 
 .neo-brutalism-white {
