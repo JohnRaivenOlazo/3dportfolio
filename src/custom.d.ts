@@ -1,15 +1,14 @@
+declare module '*';
+
+declare module '*.glb' {
+    const src: string;
+    export default src; 
+}
+
 // declare module '*.*' {
 //     const content: string;
 //     export default content;
 // }
-
-declare module '*.glb' {
-
-    const src: string;
-  
-    export default src;
-  
-}
 
 // declare module '*.png' {
 
@@ -41,5 +40,3 @@ declare module '*.glb' {
 //     const content: string;
 //     export default content;
 // }
-
-declare module '*';
