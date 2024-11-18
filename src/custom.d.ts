@@ -1,43 +1,45 @@
-declare module '*.*' {
-    const content: string;
-    export default content;
-}
+// declare module '*.*' {
+//     const content: string;
+//     export default content;
+// }
 
-declare module '*.glb' {
+// declare module '*.glb' {
 
-    const src: string;
+//     const src: string;
   
-    export default src;
+//     export default src;
   
-}
+// }
 
-declare module '*.png' {
+// declare module '*.png' {
 
-    const src: string;
+//     const src: string;
   
-    export default src;
+//     export default src;
   
-}
+// }
  
-declare module '*.svg' {
+// declare module '*.svg' {
 
-    const src: string;
+//     const src: string;
   
-    export default src;
+//     export default src;
   
-}
+// }
 
-declare module '*.jpg' {
-    const content: string;
-    export default content;
-}
+// declare module '*.jpg' {
+//     const content: string;
+//     export default content;
+// }
 
-declare module '*.mp3' {
-    const content: string;
-    export default content;
-}
+// declare module '*.mp3' {
+//     const content: string;
+//     export default content;
+// }
 
-declare module '*.css' {
-    const content: string;
-    export default content;
-}
+// declare module '*.css' {
+//     const content: string;
+//     export default content;
+// }
+
+declare module '*';
