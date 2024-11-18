@@ -24,9 +24,6 @@
     "noUncheckedSideEffectImports": true
   },
   "include": [
-    "src",
-    "custom.d.ts",
-    "assets",         
-    "types/**/*"
+    "src/**/*"
   ]
 }
