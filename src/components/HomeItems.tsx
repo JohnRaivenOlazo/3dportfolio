@@ -17,7 +17,7 @@ const Info = (props: any) => {
 
 const items = {
     1: (    
-        <div className="neo-brutalism-blue text-gray-100 sm:text-xl sm:leading-snug text-center py-3 px-8 animate-popup-expand">
+        <div className="neo-brutalism-blue text-gray-100 sm:text-xl sm:leading-snug text-center py-2 px-8 animate-popup-expand">
             Hi, I'm <strong className="font-bold text-white">Raiven</strong>. <br />
             A <strong className='text-white'>Software Engineer</strong> based in the <a href="https://www.google.com/search?q=Philippines" target="_blank" className="underline font-semibold text-sky-300">Philippines</a>.
         </div>

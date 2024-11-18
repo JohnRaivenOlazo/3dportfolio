@@ -177,7 +177,7 @@ body:has(.card[data-color="green"]:hover) {
               0 0 80px rgba(0, 146, 219, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  @apply rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105;
+  @apply mx-4 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105;
 }
 
 .neo-brutalism-white {
