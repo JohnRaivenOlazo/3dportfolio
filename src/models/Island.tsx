@@ -6,7 +6,7 @@ Source: https://sketchfab.com/3d-models/fantasy-island-88765d3c5db349e59c39cf9f5
 Title: Fantasy_Island
 */
 
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { a } from "@react-spring/three";
