@@ -32,11 +32,11 @@ const Home = () => {
 
   const adjustBoatForScreenSize = () => {
     let rotation = isRotating ? [ -0.3, 2.2, -0.05 ]: [-0.2, 2.2, 0] ;
-    let screenScale = [0.4, 0.6, 0.4];
+    let screenScale = [0.8, 0.9, 0.8];
     let screenPosition = [0, -3.5, 0];
 
     if(window.innerWidth < 768) {
-      screenScale = [0.6, 0.7, 0.6];
+      screenScale = [0.4, 0.5, 0.4];
       screenPosition = [0, -2.9, 0];  
     } else {
       screenScale = [0.8, 0.9, 0.8];
