@@ -53,9 +53,9 @@ const Island = ( props: any ) => {
       
       const delta = (clientX - lastX.current) / viewport.width;
       
-      islandRef.current.rotation.y += delta * 0.005 * Math.PI;
+      islandRef.current.rotation.y += delta * 0.004 * Math.PI;
       lastX.current = clientX;
-      rotationSpeed.current = delta * 0.005 * Math.PI;
+      rotationSpeed.current = delta * 0.004 * Math.PI;
     }
 
   }
