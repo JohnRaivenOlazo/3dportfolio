@@ -3,13 +3,13 @@
 //     export default content;
 // }
 
-// declare module '*.glb' {
+declare module '*.glb' {
 
-//     const src: string;
+    const src: string;
   
-//     export default src;
+    export default src;
   
-// }
+}
 
 // declare module '*.png' {
 
