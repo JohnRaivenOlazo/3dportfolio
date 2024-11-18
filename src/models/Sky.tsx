@@ -6,7 +6,7 @@ import { useFrame } from '@react-three/fiber';
 
 const Sky = ({ isRotating, ...props }) => {
     const sky = useGLTF(skyScene);
-    const skyRef = useRef();
+    const skyRef = useRef(null);
     
     useFrame((_, delta) => {
         if(isRotating) {
