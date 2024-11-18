@@ -12,8 +12,9 @@ import { useFrame, useThree } from "@react-three/fiber";
 import { a } from "@react-spring/three";
 import islandScene from "../assets/3d/fantasy_island.glb";
 
-const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
-  const islandRef = useRef(); 
+const Island = ( props: any ) => {
+  const { isRotating, setIsRotating, setCurrentStage } = props;
+  const islandRef = useRef(null); 
 
   const { gl, viewport } = useThree();
   const { nodes, materials } = useGLTF(islandScene);
@@ -22,7 +23,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
   const rotationSpeed = useRef(0);
   const dampingFactor = 0.95;
 
-  const handlePointerDown = (e) => {
+  const handlePointerDown = (e: any) => {
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(true);
@@ -34,13 +35,13 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
     lastX.current = clientX;
   }
 
-  const handlePointerUp = (e) => {
+  const handlePointerUp = (e: any) => {
     e.stopPropagation();
     e.preventDefault();
     setIsRotating(false);
   }
 
-  const handlePointerMove = (e) => {
+  const handlePointerMove = (e: any) => {
     e.stopPropagation();
     e.preventDefault();
 
@@ -58,7 +59,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
 
   }
 
-  const handleKeyDown = (e) => {
+  const handleKeyDown = (e: any) => {
     if(e.key === "ArrowLeft") {
       if(!isRotating) setIsRotating(true);
       islandRef.current.rotation.y += 0.01 * Math.PI;
@@ -68,7 +69,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
     }
   }
 
-  const handleKeyUp = (e) => {
+  const handleKeyUp = (e: any) => {
   if(e.key === "ArrowLeft" || e.key === "ArrowRight") {
     setIsRotating(false);
   }
@@ -1819,8 +1820,5 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
     </a.group>
   )
 }
-
-useGLTF.preload(islandScene)
-
 
 export default Island

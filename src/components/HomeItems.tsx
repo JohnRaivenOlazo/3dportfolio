@@ -1,8 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { arrow } from '../assets/icons';
 
-const Info = ({text, link, btnText }) => {
+const Info = (props: any) => {
+    const { text, link, btnText } = props;
+    
     return (
         <div className='neo-brutalism-blue info-box animate-popup-expand'>
             <p className="font-small text-sm sm:text-lg text-center">{text}</p>

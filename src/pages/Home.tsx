@@ -6,7 +6,7 @@ import Island from '../models/Island'
 import Sky from '../models/Sky'
 import Boat from '../models/Boat'
 import HomeItems from '../components/HomeItems'
-import { soundon, soundoff } from '../assets/icons'
+import {soundon, soundoff } from '../assets/icons'
 import backgroundMusic from '../assets/beach.mp3'
 
 const Home = () => {
