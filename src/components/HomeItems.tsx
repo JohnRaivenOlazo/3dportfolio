@@ -6,7 +6,7 @@ const Info = (props: any) => {
     
     return (
         <div className='neo-brutalism-blue info-box animate-popup-expand'>
-            <p className="font-small text-sm sm:text-lg text-center">{text}</p>
+            <p className="font-small text-xs sm:text-lg text-center">{text}</p>
         <Link to={link} className='neo-brutalism-white neo-btn'>
         {btnText}
         <img src={arrow} />
