@@ -75,7 +75,7 @@ const Home = () => {
       {currentStage && <HomeItems currentStage={currentStage} />}
       </div>
     <Canvas 
-         className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
+         className={`w-full h-screen fixed bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
          camera={{ near: 0.1, far: 1000 }}>
       <Suspense fallback={<Loader />}>
       <directionalLight position={[0, 1, 0]} intensity={1.5} />

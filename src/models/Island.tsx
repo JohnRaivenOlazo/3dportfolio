@@ -11,11 +11,11 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { a } from "@react-spring/three";
 import islandScene from "../assets/3d/fantasy_island.glb";
-import * as THREE from 'three';
 
-const Island = (props: any) => {
+
+const Island = ( props: any ) => {
   const { isRotating, setIsRotating, setCurrentStage } = props;
-  const islandRef = useRef<THREE.Group>(null);
+  const islandRef = useRef(null); 
 
   const { gl, viewport } = useThree();
   const { nodes, materials } = useGLTF(islandScene) as any;
@@ -111,22 +111,24 @@ const Island = (props: any) => {
 
   })
 
-  useEffect(()=>{
+  useEffect(() => {
     const canvas = gl.domElement;
+    canvas.style.touchAction = 'none';
     canvas.addEventListener('pointerdown', handlePointerDown);
     canvas.addEventListener('pointerup', handlePointerUp);
     canvas.addEventListener('pointermove', handlePointerMove);
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('keyup', handleKeyUp);
-    
+  
     return () => {
       canvas.removeEventListener('pointerdown', handlePointerDown);
       canvas.removeEventListener('pointerup', handlePointerUp);
       canvas.removeEventListener('pointermove', handlePointerMove);
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('keyup', handleKeyUp);
+      canvas.style.touchAction = '';
     }
-  }, [gl, handlePointerDown, handlePointerUp, handlePointerMove])
+  }, [gl, handlePointerDown, handlePointerUp, handlePointerMove]);
 
   return (
     <a.group ref={islandRef} {...props}>
