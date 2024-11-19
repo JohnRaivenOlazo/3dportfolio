@@ -8,6 +8,7 @@ import Boat from '../models/Boat'
 import HomeItems from '../components/HomeItems'
 import {soundon, soundoff } from '../assets/icons'
 import backgroundMusic from '../assets/beach.mp3'
+import transition from "./transition"
 
 const Home = () => {
   const audioRef = useRef(new Audio(backgroundMusic));
@@ -71,7 +72,8 @@ const Home = () => {
 
   return (
   <section className='w-full h-screen'>
-      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+      <div 
+      className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
       {currentStage && <HomeItems currentStage={currentStage} />}
       </div>
     <Canvas 
@@ -114,4 +116,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default transition(Home)

@@ -1,7 +1,9 @@
+import transition from "./transition"
+
 const About = () => {
   return (
-    <div>About</div>
+    <div className="">About</div>
   )
 }
 
-export default About
+export default transition(About)

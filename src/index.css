@@ -186,3 +186,28 @@ body:has(.card[data-color="green"]:hover) {
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
+
+/*Animation*/
+
+
+.slide-in-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #086c5c;
+  transform-origin: bottom;
+}
+
+.slide-out-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #086c5c;
+  transform-origin: top;
+}
+
+
