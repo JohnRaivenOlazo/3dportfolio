@@ -7,10 +7,10 @@ const Navbar = () => {
         <p className='blue-gradient_text'>JRO</p>
       </NavLink>
       <nav className="flex justify-center items-center space-x-4 bg-transparent px-4 py-2 font-bold text-lg rounded-lg backdrop-blur-sm">
-        <NavLink to="/about" className={({ isActive }) => `${isActive ? 'text-blue-500 font-bold' : 'text-white'} hover:text-sky-300 transition-colors duration-200 ease`}>
+        <NavLink to="/about" className={({ isActive }) => `${isActive ? 'text-blue-500 font-bold' : 'text-black'} hover:text-sky-300 transition-colors duration-200 ease`}>
           About
         </NavLink>
-        <NavLink to="/contact" className={({ isActive }) => `${isActive ? 'text-blue-500 font-bold' : 'text-white'} hover:text-sky-300 transition-colors duration-200 ease`}>
+        <NavLink to="/contact" className={({ isActive }) => `${isActive ? 'text-blue-500 font-bold' : 'text-black'} hover:text-sky-300 transition-colors duration-200 ease`}>
           Contact
         </NavLink>
       </nav>
