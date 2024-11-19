@@ -94,10 +94,10 @@ const Island = ( props: any ) => {
         case normalizedRotation >= 4.0 && normalizedRotation <= 4.5:
           setCurrentStage(4);
           break;
-        case normalizedRotation >= 5.0 && normalizedRotation <= 6.5:
+        case normalizedRotation >= 0 && normalizedRotation <= 0.5:
           setCurrentStage(3);
           break;
-        case normalizedRotation >= 1.0 && normalizedRotation <= 2.0:
+        case normalizedRotation >= 1.3 && normalizedRotation <= 2.0:
           setCurrentStage(2);
           break;
         case normalizedRotation >= 2.5 && normalizedRotation <= 3.0:
