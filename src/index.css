@@ -211,3 +211,23 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 
+/*Tutorial Hiding Transition*/
+.fade-out {
+  animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+
+
+

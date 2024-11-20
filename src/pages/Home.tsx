@@ -9,6 +9,7 @@ import HomeItems from '../components/HomeItems'
 import {soundon, soundoff } from '../assets/icons'
 import backgroundMusic from '../assets/beach.mp3'
 import transition from "./transition"
+import Tutorial from '../components/Tutorial'
 
 const Home = () => {
   const audioRef = useRef(new Audio(backgroundMusic));
@@ -70,6 +71,43 @@ const Home = () => {
       config: { mass: 1, tension: 150, friction: 26 }
     });
 
+    const [showTutorial, setShowTutorial] = useState(true);
+    const [isMove, setIsMove] = useState(false);
+
+  useEffect(() => {
+  const hideTutorial = () => {
+        setIsMove(true);
+        setTimeout(() => {
+          setShowTutorial(false);
+        }, 2000);
+  };
+
+  const handleClick = () => {
+    hideTutorial();
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      hideTutorial();
+    }
+  };
+
+  const handleTouchStart = () => {
+    hideTutorial();
+  };
+
+  window.addEventListener("click", handleClick);
+  window.addEventListener("keydown", handleKeyDown);
+  window.addEventListener("touchstart", handleTouchStart);
+
+  return () => {
+    window.removeEventListener("click", handleClick);
+    window.removeEventListener("keydown", handleKeyDown);
+    window.removeEventListener("touchstart", handleTouchStart);
+  };
+}, []); // Empty dependency array ensures the effect runs only once
+
+
   return (
   <section className='w-full h-screen'>
       <div 
@@ -112,6 +150,8 @@ const Home = () => {
     onClick={()=> setIsPlaying(!isPlaying)}
     />
     </div> 
+    
+    {showTutorial && <div className={`${isMove && 'fade-out'}`}><Tutorial /></div>}
   </section>
   )
 }
