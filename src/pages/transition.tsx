@@ -18,7 +18,7 @@ const transition = (Component: any) => {
       initial={{ scaleY: 1, borderRadius: '0%' }}
       animate={{ scaleY: 0 }}
       exit={{ scaleY: 0 }}
-      transition={{ duration: 0.8, easeout: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, easeout: [0.22, 1, 0.36, 1] }}
       />
     </>
   )
