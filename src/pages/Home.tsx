@@ -29,7 +29,7 @@ const Home = () => {
 
 
   const [isRotating, setIsRotating ] = useState(false);
-  const [currentStage, setCurrentStage] = useState(1);
+  const [currentStage, setCurrentStage] = useState(null);
 
   const adjustBoatForScreenSize = () => {
     let rotation = isRotating ? [ -0.3, 2.2, -0.05 ]: [-0.2, 2.2, 0] ;
@@ -48,7 +48,7 @@ const Home = () => {
   }
 
   const adjustIslandForScreenSize = () => {
-        let rotation = [-0.30, 2.5, 0];
+        let rotation = [-0.30, 3.2, 0];
         let screenScale = [1, 1, 1]; 
         let screenPosition  = [];
 
