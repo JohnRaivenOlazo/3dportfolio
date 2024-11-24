@@ -3,9 +3,9 @@ import logo from '/logo-64.png'
 const Navbar = () => {
   return (
     <header className="header flex justify-between items-center p-4 fixed top-0 w-full z-50 px-5">
-      <NavLink to="/" className="flex flex-row justify-center items-center gap-2 backdrop-blur-sm rounded-lg p-2">
-        <img src={logo} alt="logo" className="w-8 h-8" />
-        <p className='text-white font-bold text-xl italic'>Portfolio.</p>
+      <NavLink to="/" className="flex flex-row justify-center items-center gap-0 backdrop-blur-sm rounded-lg p-1">
+        <img src={logo} alt="logo" className="w-6 h-6" />
+        <p className='blue-gradient_text font-bold text-md italic uppercase'>ohn Raiven Olazo</p>
       </NavLink>
       <nav className="relative flex justify-center items-center space-x-4 bg-transparent px-4 py-2 font-bold text-md md:text-xl backdrop-blur-sm rounded-lg p-2">
         <p className="relative group">
