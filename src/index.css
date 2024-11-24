@@ -227,7 +227,14 @@ body:has(.card[data-color="green"]:hover) {
   }
 }
 
-
-
-
-
+.glare {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(27, 0, 133, 0.3) 0%, rgba(22, 0, 109, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  z-index: 10;
+}

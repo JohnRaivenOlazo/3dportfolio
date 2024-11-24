@@ -26,12 +26,15 @@ export default {
           200: "#D5DAE1"
         },
         black: {
-          DEFAULT: "#000",
+          DEFAULT: "#000000",
           500: "#1D2235"
         },
         blue: {
           500: "#2b77e7"
         }
+      },
+      backgroundColor: {
+        main: 'rgb(3,0,15, 1)'
       },
       fontFamily: {
         worksans: ["Work Sans", "sans-serif"],
