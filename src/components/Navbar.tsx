@@ -1,11 +1,16 @@
 import { NavLink } from 'react-router-dom'
-import logo from '/logo-64.png'
 const Navbar = () => {
   return (
     <header className="header flex justify-between items-center p-4 fixed top-0 w-full z-50 px-5">
-      <NavLink to="/" className="flex flex-row justify-center items-center gap-0 backdrop-blur-sm rounded-lg p-1">
-        <img src={logo} alt="logo" className="w-5 h-5 sm:w-6 sm:h-6" />
-        <p className='blue-gradient_text font-bold sm:text-lg text-xs uppercase'>ohn Raiven Olazo</p>
+            <NavLink 
+        to="/" 
+        className="text-2xl font-bold text-white hover:text-blue-800 transition-all duration-300 
+                  relative after:content-[''] after:absolute after:-bottom-0 after:left-0 after:w-full 
+                  after:h-0.5 after:bg-blue-500 hover:after:bg-blue-800"
+      >
+        <p className="transform hover:-translate-y-0.5 transition-all duration-300">
+          raiven.dev
+        </p>
       </NavLink>
       <nav className="relative flex justify-center items-center space-x-4 bg-transparent px-4 py-2 font-bold text-md md:text-xl backdrop-blur-sm rounded-lg p-2">
         <p className="relative group">

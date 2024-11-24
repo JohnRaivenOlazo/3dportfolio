@@ -6,7 +6,7 @@ const About = () => {
 
 
   return (
-    <div className="bg-main h-screen overflow-x-hidden relative">
+    <div className="bg-main relative h-screen overflow-x-hidden">
       <StarsCanvas />
       <GlareEffect />
       <div>
