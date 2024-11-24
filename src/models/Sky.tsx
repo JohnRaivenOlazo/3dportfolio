@@ -1,6 +1,6 @@
 import { useGLTF } from '@react-three/drei'
 import { useRef } from 'react'
-import skyScene from '../assets/3d/sky.glb'
+import skyScene from '../assets/3d/sky_night.glb'
 import { useFrame } from '@react-three/fiber';
 
 const Sky = ({ isRotating, ...props }) => {
@@ -9,7 +9,7 @@ const Sky = ({ isRotating, ...props }) => {
     
     useFrame((_, delta) => {
         if(isRotating) {
-            skyRef.current.rotation.y += 0.03 * delta;
+            skyRef.current.rotation.y += 0.02 * delta;
         }
     })
 

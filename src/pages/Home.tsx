@@ -115,13 +115,15 @@ const Home = () => {
       {currentStage && <HomeItems currentStage={currentStage} />}
       </div>
     <Canvas 
-         className={`w-full h-screen fixed bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
+         className={`w-full h-screen fixed bg-black ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
          camera={{ near: 0.1, far: 1000 }}>
       <Suspense fallback={<Loader />}>
-      <directionalLight position={[0, 1, 0]} intensity={1.5} />
-      <hemisphereLight color="#fff" groundColor="#000" intensity={2} />
+      <directionalLight position={[0, 10, 0]} intensity={1.5} />
+      <hemisphereLight color="#ffffff" groundColor="#000000" intensity={0.5} />
       <Sky
-      rotation={[-0.3, 0, 0]} 
+      position={[0, 0, 0]}
+      scale={[10, 10, 10]}
+      rotation={[0, -10, 0]} 
       isRotating={isRotating}
       />
       <Island 

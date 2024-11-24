@@ -93,16 +93,16 @@ const Island = ( props: any ) => {
 
       // Set the current stage based on the island's orientation
       switch (true) {
-        case normalizedRotation >= 4.0 && normalizedRotation <= 5.0:
+        case normalizedRotation >= 3.5 && normalizedRotation <= 4.5:
           setCurrentStage(4);
           break;
-        case normalizedRotation >= 0 && normalizedRotation <= 0.5:
+        case normalizedRotation >= 5.0 && normalizedRotation <= 6.5:
           setCurrentStage(3);
           break;
-        case normalizedRotation >= 1.3 && normalizedRotation <= 2.0:
+        case normalizedRotation >= 0.8 && normalizedRotation <= 1.5:
           setCurrentStage(2);
           break;
-        case normalizedRotation >= 2.5 && normalizedRotation <= 3.0:
+        case normalizedRotation >= 2.0 && normalizedRotation <= 3.0:
           setCurrentStage(1);
           break;
         default:
