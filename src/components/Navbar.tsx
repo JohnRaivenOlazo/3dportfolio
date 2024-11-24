@@ -7,17 +7,17 @@ const Navbar = () => {
         <img src={logo} alt="logo" className="w-8 h-8" />
         <p className='text-white font-bold text-xl italic'>Portfolio.</p>
       </NavLink>
-      <nav className="relative flex justify-center items-center space-x-4 bg-transparent px-4 py-2 font-bold text-xl backdrop-blur-sm rounded-lg p-2">
+      <nav className="relative flex justify-center items-center space-x-4 bg-transparent px-4 py-2 font-bold text-md md:text-xl backdrop-blur-sm rounded-lg p-2">
         <p className="relative group">
         <NavLink to="/about" className={({ isActive }) => `${isActive ? 'text-blue-500 font-bold' : 'text-white'} hover:text-sky-300 transition-colors duration-200 ease`}>
           <span className='inline-block hover:-translate-y-0.5 transition-all'>About</span>
-          <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-0 h-0.5 rounded-sm bg-blue-400 -z-10 group-hover:w-full transition-all"/>
+          <span className="absolute left-1/2 transform -translate-x-1/2 bottom-1 w-0 h-0.5 rounded-sm bg-blue-400 -z-10 group-hover:w-full transition-all"/>
         </NavLink>
         </p>
         <p className="relative group">
         <NavLink to="/contact" className={({ isActive }) => `${isActive ? 'text-blue-500 font-bold' : 'text-white'} hover:text-sky-300 transition-colors duration-200 ease`}>
           <span className='inline-block hover:-translate-y-0.5 transition-all'>Contact</span>
-          <span className="absolute left-1/2 transform -translate-x-1/2 bottom-0 w-0 h-0.5 rounded-sm bg-blue-400 -z-10 group-hover:w-full transition-all"/>
+          <span className="absolute left-1/2 transform -translate-x-1/2 bottom-1 w-0 h-0.5 rounded-sm bg-blue-400 -z-10 group-hover:w-full transition-all"/>
         </NavLink>
         </p>
       </nav>
