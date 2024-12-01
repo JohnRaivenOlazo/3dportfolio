@@ -27,7 +27,7 @@ const Navbar = () => {
           className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
         >
             {isHome ? (
-            <img src={logo} alt="logo" className="transition-transform duration-500 w-full max-w-xs h-auto"
+            <img src={logo} alt="logo" className="transition-transform duration-500 w-full max-w-xs h-10 sm:h-16"
             />
             ) : (
             <p
