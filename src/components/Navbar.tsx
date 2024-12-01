@@ -31,7 +31,7 @@ const Navbar = () => {
             />
             ) : (
             <p
-              className="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-indigo-500 transform hover:-translate-y-0.5 hover:scale-105 transition-all duration-300"
+              className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 via-teal-300 to-teal-500 transform hover:-translate-y-0.5 hover:scale-105 transition-all duration-300"
             >
               <span className="sm:inline-block hidden">John</span> Raiven{' '}
               <span className="sm:inline-block hidden">Olazo</span>
@@ -39,7 +39,7 @@ const Navbar = () => {
             )}
         </div>
       </NavLink>
-      <nav className="relative flex justify-center items-center space-x-4 bg-transparent px-4 py-2 text-md md:text-xl backdrop-blur-sm rounded-lg p-2">
+      <nav className="relative flex justify-center items-center space-x-4 bg-transparent px-4 py-2 text-md md:text-xl backdrop-blur-3xl rounded-lg p-2">
         <p className="relative group">
           <NavLink
             to="/about"

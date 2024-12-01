@@ -10,22 +10,45 @@
 }
 
 .main-container::-webkit-scrollbar,
-.right-side::-webkit-scrollbar {
+.right-side::-webkit-scrollbar,
+.container::-webkit-scrollbar {
   width: 10px;
 }
 
 .main-container::-webkit-scrollbar-track,
-.right-side::-webkit-scrollbar-track {
+.right-side::-webkit-scrollbar-track,
+.container::-webkit-scrollbar-track {
   background: rgb(3,0,15,1);
 }
 
 .main-container::-webkit-scrollbar-thumb,
-.right-side::-webkit-scrollbar-thumb {
+.right-side::-webkit-scrollbar-thumb,
+.container::-webkit-scrollbar-thumb {
   background: rgba(27, 0, 133, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid rgba(27, 0, 133, 1);
+}
+
+.sub-container::-webkit-scrollbar {
+  width: 10px;
+}
+.sub-container::-webkit-scrollbar-track {
+  background: rgb(3,0,15,1);
+}
+
+.sub-container::-webkit-scrollbar-thumb {
+  background: rgba(27, 0, 133, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(27, 0, 133, 1);
+}
+
+
+* {
+  scroll-behavior: smooth;
 }
 
 body {
