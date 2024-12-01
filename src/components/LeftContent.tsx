@@ -46,13 +46,13 @@ const LeftContent = ({ activeSection }) => {
       </div>
 
     <div className="mt-10 flex gap-5 justify-center md:justify-start">
-      <a href="linkedin" className="w-6 h-6 text-gray-400 hover:text-gray-300 hover:-translate-y-1 transition-all duration-300 ease">
+      <a href="https://www.linkedin.com/in/john-raiven-olazo" className="w-6 h-6 text-gray-400 hover:text-gray-300 hover:-translate-y-1 transition-all duration-300 ease">
         <FaLinkedin className="w-full h-full" />
       </a>
-      <a href="github" className="w-6 h-6 text-gray-400 hover:text-gray-300 hover:-translate-y-1 transition-all duration-300 ease">
+      <a href="https://github.com/JohnRaivenOlazo" className="w-6 h-6 text-gray-400 hover:text-gray-300 hover:-translate-y-1 transition-all duration-300 ease">
         <FaGithub className="w-full h-full" />
       </a>
-      <a href="facebook" className="w-6 h-6 text-gray-400 hover:text-gray-300 hover:-translate-y-1 transition-all duration-300 ease">
+      <a href="https://www.facebook.com/johnraivenolazo" className="w-6 h-6 text-gray-400 hover:text-gray-300 hover:-translate-y-1 transition-all duration-300 ease">
         <FaFacebook className="w-full h-full" />
       </a>
     </div>
