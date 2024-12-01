@@ -10,6 +10,12 @@ declare module '*.svg' {
   
 }
 
+declare module '*.json' {
+    const src: string;
+    export default src;
+  
+}
+
 declare module '*.jpg' {
     const content: string;
     export default content;
