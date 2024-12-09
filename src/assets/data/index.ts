@@ -15,4 +15,12 @@ const projects = [
     // }
 ]
 
-export { projects }
+const sections = [
+  { id: "overview", label: "About" },
+  { id: "projects", label: "Projects" },
+  { id: "technologies", label: "Technologies" },
+  { id: "contact", label: "Contact" },
+  { id: "", label: "Footer" },
+];
+
+export { projects, sections }

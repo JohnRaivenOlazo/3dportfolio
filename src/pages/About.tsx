@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import StarsCanvas from "../components/canvas/StarsCanvas";
 import GlareEffect from "../components/canvas/GlareEffect";
 import transition from "./transition";
-import LeftContent from "../components/LeftContent";
+import ContentLeft from "../components/ContentLeft";
+import ContentRight from "../components/ContentRight";
 
 const About = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -16,6 +17,7 @@ const About = () => {
               setActiveSection("");
             } else {
               setActiveSection(entry.target.id);
+              history.replaceState(null, "", window.location.pathname);
             }
           }
         });
@@ -30,34 +32,28 @@ const About = () => {
     };
   }, []);
 
+  //Scroll to the section if the URL has a hash
+  useEffect(() => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      const section = document.getElementById(hash);
+      if (section) {
+        section.scrollIntoView();
+      }
+    }
+  }, []);
+  
   return (
     <div className="main-container bg-main relative min-h-screen max-h-screen sm:h-screen overflow-y-scroll overflow-x-hidden sm:overflow-hidden">
       <StarsCanvas />
       <GlareEffect />
-      <div className="sub-container px-8 md:px-0 lg:px-0 flex flex-col md:flex-row items-start justify-evenly h-full overflow-hidden sm:overflow-y-scroll relative sm:sticky">
-        <div className="text-gray-50 p-4 md:p-8 rounded-lg mb-4 md:mb-0 w-full md:w-[56%] lg:w-1/2 sticky top-20 left-auto leading-none text-center sm:text-start">
-          <LeftContent activeSection={activeSection} />
+      <div className="sub-container px-8 md:px-0 lg:px-0 flex flex-col md:flex-row items-start justify-center h-full overflow-hidden sm:overflow-y-scroll relative sm:sticky">
+        <div className="text-gray-50 p-4 md:p-8 rounded-lg mb-4 md:mb-0 w-full md:w-[56%] lg:w-auto sticky top-24 left-auto leading-none text-center md:text-start">
+          <ContentLeft activeSection={activeSection} />
         </div>
 
-        <div className="pt-24 pb-14 w-full h-full md:w-[40%] lg:w-[40%] text-gray-400">
-          <div className="h-screen" id="about">
-            ABOUT
-          </div>
-          <div className="h-screen" id="projects">
-            PROJECTS
-          </div>
-          <div className="h-screen" id="technologies">
-            TECHNOLOGIES
-          </div>
-          <div className="h-screen" id="certifications">
-            CERTIFICATIONS
-          </div>
-          <div className="h-screen" id="contacts">
-            CONTACTS
-          </div>
-          <div className="h-screen" id="footer">
-            FOOTER
-          </div>
+        <div className="pb-14 w-full ml-0 lg:ml-20 h-full md:w-[35%] lg:w-[40%] text-gray-400">
+          <ContentRight />
         </div>
       </div>
     </div>

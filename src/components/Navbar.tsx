@@ -12,22 +12,22 @@ const Navbar = () => {
     const timer = setTimeout(() => {
       setIsHome(location.pathname === '/');
       setIsTransitioning(false);
-    }, 1300);
+    }, 1000);
 
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
   return (
-    <header className="header flex justify-between items-center p-4 fixed top-0 w-full z-50 px-5">
+    <header className="header flex justify-between items-center p-4 relative sm:fixed top-0 w-full z-50 px-5">
       <NavLink
         to="/"
         className="text-2xl font-bold hover:text-blue-300 transition-all duration-300 relative"
       >
         <div
-          className={`transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
+          className={`backdrop-blur-lg px-2 py-1 rounded-lg transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
         >
             {isHome ? (
-            <img src={logo} alt="logo" className="transition-transform duration-500 w-full max-w-xs h-10 sm:h-16"
+            <img src={logo} alt="logo" className="transition-transform duration-500 w-full max-w-xs h-10 sm:h-12"
             />
             ) : (
             <p
@@ -39,30 +39,16 @@ const Navbar = () => {
             )}
         </div>
       </NavLink>
+      {isHome && (
       <nav className="relative flex justify-center items-center space-x-4 bg-transparent px-4 py-2 text-md md:text-xl backdrop-blur-3xl rounded-lg p-2">
         <p className="relative group">
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              `${isActive ? 'text-cyan-400' : 'text-white'} hover:text-teal-300 transition-colors duration-200 ease`
-            }
-          >
-            <span className="inline-block hover:-translate-y-0.5 transition-all">About</span>
-            <span className="absolute left-1/2 transform -translate-x-1/2 bottom-1 w-0 h-0.5 rounded-sm bg-blue-400 -z-10 group-hover:w-full transition-all" />
-          </NavLink>
-        </p>
-        <p className="relative group">
-          <NavLink
-            to="/contact"
-            className={({ isActive }) =>
-              `${isActive ? 'text-cyan-400' : 'text-white'} hover:text-teal-300 transition-colors duration-200 ease`
-            }
-          >
-            <span className="inline-block hover:-translate-y-0.5 transition-all">Contact</span>
+          <NavLink to="/about" className="text-white hover:text-teal-300 transition-colors duration-200 ease">
+            <span className="font-bold inline-block hover:-translate-y-0.5 transition-all">About Me</span>
             <span className="absolute left-1/2 transform -translate-x-1/2 bottom-1 w-0 h-0.5 rounded-sm bg-blue-400 -z-10 group-hover:w-full transition-all" />
           </NavLink>
         </p>
       </nav>
+      )}
     </header>
   );
 };
