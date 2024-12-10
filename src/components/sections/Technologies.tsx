@@ -1,5 +1,5 @@
-import { technologies } from "../../assets/data";
-import BallCanvas from "../canvas/Ball";
+// import { technologies } from "../../assets/data";
+// import BallCanvas from "../canvas/Ball";
 
 const Technologies = () => {
   return (
