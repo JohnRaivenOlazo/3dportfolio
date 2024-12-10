@@ -34,7 +34,7 @@ const Contact = () => {
         <div className="mb-4">
           <input
             type="text"
-            name="username"
+            name="to_name"
             className="w-full p-3 rounded bg-gray-800 shadow-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
             placeholder="Enter your name"
             required
@@ -43,7 +43,7 @@ const Contact = () => {
         <div className="mb-4">
           <input
             type="email"
-            name="useremail"
+            name="from_name"
             className="w-full p-3 rounded bg-gray-800 shadow-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
             placeholder="Enter your email"
             required
