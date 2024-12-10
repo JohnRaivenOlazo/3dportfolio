@@ -1,4 +1,3 @@
-import { lazy } from "react";
 import { useInView } from "react-intersection-observer";
 import { technologies } from "../../assets/data";
 import BallCanvas from "../canvas/Ball";
