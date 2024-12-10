@@ -33,7 +33,7 @@ const Home = () => {
   const adjustSpaceshipForScreenSize = () => {
     let screenScale: number[];
     let screenPosition = isRotating ? [0.3, -1.5, 0] : [0, -1.5, 1];
-    let rotation = isRotating ? [-0.7, 1.2, 0] : [-0.7, 1.5, 0.5];
+    let rotation = isRotating ? [-0.7, 1.5, -0.5] : [-0.7, 1.5, 0.5];
 
     if (window.innerWidth < 768) {
       screenScale = [0.2, 0.2, 0.2];
