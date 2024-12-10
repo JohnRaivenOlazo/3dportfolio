@@ -9,7 +9,7 @@ const About = () => {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
-    const sections = document.querySelectorAll("div[id]");
+    const sections = document.querySelectorAll(".title[id]");
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {

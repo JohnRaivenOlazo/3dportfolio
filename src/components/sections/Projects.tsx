@@ -11,7 +11,7 @@ const Projects = () => {
   const filteredProjects = filter === "All" ? projects : projects.filter((project) => project.category === filter);
 
   return (
-    <div className="w-full h-auto flex flex-col justify-start relative text-white min-h-screen">
+    <div className="w-full h-auto flex flex-col justify-start relative text-white">
       <div className="text-center lg:text-left">
         <h1 className="text-2xl md:text-3xl text-gray-400 mb-4">{`<`}</h1>
         <h1 className="mb-2 text-3xl md:text-4xl">
