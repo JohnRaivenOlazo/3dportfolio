@@ -15,7 +15,8 @@ const Technologies = () => {
         <div ref={ref} className="grid grid-cols-3 lg:grid-cols-5 justify-center lg:justify-around gap-4">
           {technologies.map((tech, index) => (
             <div key={`${tech.name}-${index}`} className="flex flex-col items-center w-16 h-16">
-              {inView && <BallCanvas icon={tech.icon} />}
+              {inView && <div className="w-16 h-16 bg-red-500">{tech.name}</div>}
+              
             </div>
           ))}
         </div>
