@@ -18,13 +18,11 @@ const Ball = (props : any) => {
       <directionalLight position={[0, 0, 0.05]} />
       <mesh scale={2.75}>
         <sphereGeometry args={[1, 64, 64]} />
-        <meshStandardMaterial
-          color='#fff'
-        />
+        <meshStandardMaterial color="#fff" />
         <Decal
           position={[0, 0, 1]}
           rotation={[2 * Math.PI, 0, 6.25]}
-          scale={0.8}
+          scale={0.5}
           map={decal}
         />
       </mesh>

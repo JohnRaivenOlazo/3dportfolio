@@ -16,9 +16,15 @@ const projects = [
     // }
 ]
 
-import { nextjs, nodejs, mongodb, html, css, sass, tailwindcss, bootstrap } from "../icons";
+import { javascript, typescript, python, java, lua, react, nextjs, nodejs, mongodb, html, css, sass, tailwindcss, bootstrap } from "../icons";
 
 const technologies = [
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "Python", icon: python },
+  { name: "Java", icon: java },
+  { name: "Lua", icon: lua },
+  { name: "React", icon: react },
   { name: "NextJS", icon: nextjs },
   { name: "NodeJS", icon: nodejs },
   { name: "MongoDB", icon: mongodb },
