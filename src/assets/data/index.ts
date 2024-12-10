@@ -25,10 +25,10 @@ const technologies = [
   // { name: "Java", icon: java },
   // { name: "Lua", icon: lua },
 
-  { name: "Redux", icon: redux },
-  { name: "React", icon: react },
   { name: "NextJS", icon: nextjs },
   { name: "NodeJS", icon: nodejs },
+  { name: "Redux", icon: redux },
+  { name: "React", icon: react },
   { name: "MongoDB", icon: mongodb },
 
   { name: "HTML5", icon: html },
