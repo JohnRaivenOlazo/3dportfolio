@@ -24,12 +24,10 @@ const technologies = [
   { name: "Python", icon: python },
   { name: "Java", icon: java },
   { name: "Lua", icon: lua },
-  
   { name: "React", icon: react },
   { name: "NextJS", icon: nextjs },
   { name: "NodeJS", icon: nodejs },
   { name: "MongoDB", icon: mongodb },
-
   { name: "HTML5", icon: html },
   { name: "CSS3", icon: css },
   { name: "Sass", icon: sass },
