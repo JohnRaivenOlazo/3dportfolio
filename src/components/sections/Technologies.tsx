@@ -1,9 +1,9 @@
 import { useInView } from "react-intersection-observer";
 import { technologies } from "../../assets/data";
-// import BallCanvas from "../canvas/Ball";
+import BallCanvas from "../canvas/Ball";
 
 const Technologies = () => {
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.0 });
 
   return (
     <div id="technologies" className="text-white">
@@ -15,8 +15,7 @@ const Technologies = () => {
         <div ref={ref} className="grid grid-cols-3 lg:grid-cols-5 justify-center lg:justify-around gap-4">
           {technologies.map((tech, index) => (
             <div key={`${tech.name}-${index}`} className="flex flex-col items-center w-16 h-16">
-              {inView && <div className="w-16 h-16 bg-red-500">{tech.name}</div>}
-              
+              {inView && <BallCanvas icon={tech.icon} />}
             </div>
           ))}
         </div>
