@@ -4,7 +4,8 @@ const projects = [
       "title": "NumPixel",
       "category": "Web",
       "description": "Fully functional web app with built-in interpolation UI Calculator with real time calculations and graphs.",
-      "image": '/banner/NumPixel.png'
+      "image": '/banner/NumPixel.png',
+      "repository": 'https://github.com/JohnRaivenOlazo/NumPixel'
     },
     // {
     //   "id": 2,
@@ -13,6 +14,14 @@ const projects = [
     //   "description": "",
     //   "image": "/banner/"
     // }
+]
+
+const technologies = [
+  {
+  id: 1,
+  title: "Languages",
+  items: ["HTML", "CSS", "JavaScript", "TypeScript", "Python", "Java", "C#"]
+ }
 ]
 
 const sections = [

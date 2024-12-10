@@ -28,12 +28,14 @@ const Contact = () => {
 
   return (
     <div id="contact" className="text-white">
-      <form ref={form} onSubmit={sendEmail} className="w-full rounded-lg shadow-lg">
+      <form ref={form} onSubmit={sendEmail} className="w-full rounded-lg shadow-lg text-sm">
+      <h2 className="text-3xl sm:text-4xl font-bold text-gray-50 pb-2">Let's Connect.</h2>
+      <p className="pb-6 sm:pb-8 text-sm text-gray-400">Have a <span className="text-gray-100">project</span> in mind or just want to say hi?</p>
         <div className="mb-4">
           <input
             type="text"
-            name="user_name"
-            className="w-full p-3 rounded bg-gray-900 shadow-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+            name="username"
+            className="w-full p-3 rounded bg-gray-800 shadow-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
             placeholder="Enter your name"
             required
           />
@@ -41,8 +43,8 @@ const Contact = () => {
         <div className="mb-4">
           <input
             type="email"
-            name="user_email"
-            className="w-full p-3 rounded bg-gray-900 shadow-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
+            name="useremail"
+            className="w-full p-3 rounded bg-gray-800 shadow-lg text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
             placeholder="Enter your email"
             required
           />
@@ -50,17 +52,14 @@ const Contact = () => {
         <div className="mb-4">
           <textarea
             name="message"
-            rows={5}
-            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-teal-500"
-            placeholder="Write your message"
+            rows={4}
+            className="w-full p-3 rounded bg-gray-800 text-white focus:outline-none focus:ring-1 focus:ring-teal-500"
+            placeholder="Write your message..."
             required
           ></textarea>
         </div>
-        <button
-          type="submit"
-          className="flex items-center gap-2 bg-gray-900 hover:bg-teal-600 text-white px-6 py-3 rounded-lg shadow-lg transition-transform transform hover:-translate-y-1"
-        >
-          <FaPaperPlane className="text-lg" /> Send Message
+        <button type="submit" className="text-md flex items-center gap-2 bg-gray-900 hover:bg-teal-600 text-white px-4 py-2 rounded-lg shadow-lg transition-all transform hover:-translate-y-1">
+          <FaPaperPlane className="text-lg" /> Send
         </button>
       </form>
     </div>

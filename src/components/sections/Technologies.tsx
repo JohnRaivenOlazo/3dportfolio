@@ -1,6 +1,6 @@
 const Technologies = () => {
   return (
-    <div className="min-h-screen"></div>
+    <div className=""></div>
   )
 }
 

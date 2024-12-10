@@ -11,7 +11,7 @@ const ContentRight = () => {
       {sections.map((section, index) => (
         <>
           {index === sections.length - 1 ? null :
-            <div className="pt-36 pb-16 group text-white inline-block uppercase" id={section.id} key={section.id}>
+            <div className="pt-36 pb-14 group text-white inline-block uppercase" id={section.id} key={section.id}>
               <p className="tracking-[0.2em] group-hover:tracking-tighter transition-all duration-300 ease font-bold">
                 {section.label}
               </p>
