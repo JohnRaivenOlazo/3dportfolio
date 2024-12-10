@@ -12,7 +12,7 @@ const Technologies = () => {
         <p className="text-gray-400 mb-12 text-sm">
           Here's a <span className="text-gray-100">selection</span> of tools and technologies I know and love working with.
         </p>
-        <div ref={ref} className="grid grid-cols-3 lg:grid-cols-5 justify-center lg:justify-around gap-4">
+        <div ref={ref} className="grid grid-cols-3 lg:grid-cols-5 justify-items-center gap-4 mx-auto">
           {technologies.slice(0,5).map((tech, index) => (
             <div key={`${tech.name}-${index}`} className="flex flex-col items-center w-16 h-16">
               {inView && <BallCanvas icon={tech.icon} />}
