@@ -10,11 +10,11 @@ const Technologies = () => {
           Here's a <span className="text-gray-100">selection</span> of tools and technologies I know and love working with.
         </p>
         <div className="grid grid-cols-4 lg:grid-cols-5 gap-5">
-          {technologies.map((tech) => (
+          {/* {technologies.map((tech) => (
             <div key={tech.name} className="flex flex-col items-center w-16 h-16 transition-all transform hover:scale-110">
               <BallCanvas icon={tech.icon}/>
             </div>
-          ))}
+          ))} */}
         </div>
       </div>
     </div>
