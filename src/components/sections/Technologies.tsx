@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import { technologies } from "../../assets/data";
-import BallCanvas from "../canvas/Ball";
+// import BallCanvas from "../canvas/Ball";
 
 const Technologies = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
