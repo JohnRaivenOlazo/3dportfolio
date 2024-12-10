@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <header className="header flex justify-between items-center p-4 relative sm:fixed top-0 w-full z-50 px-5">
       <NavLink
-        to="/"
+        to={location.pathname === '/about' || location.pathname === '/' ? '/' : '/about#project-category'}
         className="text-2xl font-bold hover:text-blue-300 transition-all duration-300 relative"
       >
         <div

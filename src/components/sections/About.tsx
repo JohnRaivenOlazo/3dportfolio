@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="text-gray-400 pb-24 text-sm">
+    <div className="text-gray-400 text-sm">
       <h2 className="text-3xl sm:text-4xl font-bold text-gray-50 pb-6 sm:pb-8">Who Am I.</h2>
       <p className="mb-4">
         I’m a full stack developer who loves making apps that are not just <span className="text-gray-100">functional</span> but also fun and easy to use. I’m turning ideas into something cool and <span className="text-gray-100">interactive</span>.

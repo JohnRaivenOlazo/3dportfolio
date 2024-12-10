@@ -16,13 +16,28 @@ const projects = [
     // }
 ]
 
+import { javascript, typescript, python, java, lua, react, nextjs, nodejs, mongodb, html, css, sass, tailwindcss, bootstrap } from "../icons";
+
 const technologies = [
-  {
-  id: 1,
-  title: "Languages",
-  items: ["HTML", "CSS", "JavaScript", "TypeScript", "Python", "Java", "C#"]
- }
-]
+  { name: "JavaScript", icon: javascript },
+  { name: "TypeScript", icon: typescript },
+  { name: "Python", icon: python },
+  { name: "Java", icon: java },
+  { name: "Lua", icon: lua },
+  
+  { name: "React", icon: react },
+  { name: "NextJS", icon: nextjs },
+  { name: "NodeJS", icon: nodejs },
+  { name: "MongoDB", icon: mongodb },
+
+  { name: "HTML5", icon: html },
+  { name: "CSS3", icon: css },
+  { name: "Sass", icon: sass },
+  { name: "TailwindCSS", icon: tailwindcss },
+  { name: "Bootstrap", icon: bootstrap },
+];
+
+
 
 const sections = [
   { id: "overview", label: "About" },
@@ -32,4 +47,4 @@ const sections = [
   { id: "", label: "Footer" },
 ];
 
-export { projects, sections }
+export { technologies, projects, sections }

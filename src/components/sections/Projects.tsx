@@ -36,10 +36,10 @@ const Projects = () => {
           <span className="text-white">Explore</span> the projects I've
           developed.
         </p>
-        <h1 className="text-2xl md:text-3xl text-gray-400 mt-4 mb-8">{`/>`}</h1>
+        <h1 className="text-2xl md:text-3xl text-gray-400 mt-4 mb-6">{`/>`}</h1>
       </div>
 
-      <div className="flex space-x-1 md:space-x-2 mb-8">
+      <div className="flex space-x-1 md:space-x-2 mb-8 pt-4" id="project-category">
         {["All", "Web", "Mobile", "Cross-Platform", "AI", "Other"].map(
           (category) => (
             <button
@@ -62,10 +62,11 @@ const Projects = () => {
           <Tilt key={project.id} options={{ max: 25, scale: 1.0 }}>
             <motion.div
               className="p-4 rounded-lg shadow-lg border-white bg-gray-950 transition-all duration-200 ease hover:bg-gray-900"
+              id={project.title}
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <Link to={project.title}>
+              <Link to={`../${project.title}`}>
               <img src={project.image} alt={project.title} className="w-full h-auto object-contain rounded-xl mb-4"/>
               <h2 className="text-xl md:text-2xl font-bold">{project.title}</h2>
               <p className="text-gray-200 mb-2 text-sm uppercase">Category: {project.category}</p>
