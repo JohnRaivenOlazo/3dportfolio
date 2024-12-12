@@ -69,13 +69,12 @@ const Home = () => {
   };
 
   const [earthScale, earthPosition, earthRotation] = adjustEarthForScreenSize();
-  const [spaceshipScale, spaceshipPosition, spaceshipRotation] =
-    adjustSpaceshipForScreenSize();
+  const [spaceshipScale, spaceshipPosition, spaceshipRotation] = adjustSpaceshipForScreenSize();
 
   const { rotation, position } = useSpring({
     rotation: spaceshipRotation,
-    position: spaceshipPosition,
-    config: { mass: 1, tension: 150, friction: 26 },
+    position: isWelcomePage ? [0, -4, 1] : spaceshipPosition,
+    config: { mass: 1, tension: 100, friction: 26 },
   });
 
   const [showTutorial, setShowTutorial] = useState(true);
