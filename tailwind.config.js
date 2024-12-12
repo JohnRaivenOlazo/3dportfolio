@@ -7,10 +7,6 @@ export default {
   theme: {
     extend: {
       keyframes: {
-        popupExpand: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
         slideLoop: {
           '0%': { transform: 'translateX(-100%)' },
           '50%': { transform: 'translateX(100%)' },
@@ -19,7 +15,6 @@ export default {
       },
       animation: {
         'slide-loop': 'slideLoop 4s linear infinite',
-        'popup-expand': 'popupExpand 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55)',
       },
       colors: {
         gray: {

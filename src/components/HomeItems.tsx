@@ -5,7 +5,7 @@ const Info = (props: any) => {
     const { text, link, btnText } = props;
     
     return (
-        <div className='glassmorphism info-box animate-popup-expand'>
+        <div className='glassmorphism info-box'>
             <p className="font-medium text-xs sm:text-lg text-center">{text}</p>
         <Link to={link} className='neo-brutalism-white neo-btn'>
         {btnText}
@@ -31,7 +31,7 @@ const items = {
         />
     ),
     3: (
-        <div className="glassmorphism text-gray-100 sm:text-xl  leading-5 text-center py-2 px-8 animate-popup-expand">
+        <div className="glassmorphism text-gray-100 sm:text-xl  leading-5 text-center py-2 px-8">
         Hi, I'm <strong className="font-bold text-white">John Raiven Olazo</strong>. <br/>
         A <strong className='text-white'>Full-Stack Developer</strong> based in the <a href="https://www.google.com/search?q=Philippines" target="_blank" className="underline font-semibold text-sky-300">Philippines</a>.
     </div>

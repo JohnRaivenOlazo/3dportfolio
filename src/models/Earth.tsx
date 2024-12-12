@@ -14,8 +14,8 @@ import { a } from '@react-spring/three'
 
 const Earth = (props : any) => {
   const { nodes, materials } = useGLTF(EarthScene) as any
-
   const { isRotating, setIsRotating, setCurrentStage } = props;
+
   const earthRef = useRef(null); 
 
   const { gl, viewport } = useThree();

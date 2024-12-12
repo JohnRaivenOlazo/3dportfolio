@@ -31,7 +31,6 @@ const Home = () => {
   const [currentStage, setCurrentStage] = useState(null);
   const [isWelcomePage, setIsWelcomePage] = useState(true);
 
-
   useEffect(() => {
   setIsPlaying(true);
   audioRef.current.play();
@@ -109,16 +108,12 @@ const Home = () => {
     };
 
     if (!isWelcomePage) {
-      const delayTimeout = setTimeout(() => {
-        canHide = true;
-      }, 2000);
-  
+      canHide = true;
       window.addEventListener("click", handleClick);
       window.addEventListener("keydown", handleKeyDown);
       window.addEventListener("touchstart", handleTouchStart);
   
       return () => {
-        clearTimeout(delayTimeout);
         window.removeEventListener("click", handleClick);
         window.removeEventListener("keydown", handleKeyDown);
         window.removeEventListener("touchstart", handleTouchStart);
@@ -126,12 +121,29 @@ const Home = () => {
     }
   }, [isWelcomePage]);
   
+  const [isPopup, setIsPopup] = useState(false);
+  
+  const handleSetCurrentStage = (stage: any) => {
+    if (currentStage === stage) return;
+    setIsPopup(false);
+    setTimeout(() => {
+      setCurrentStage(stage);
+      setTimeout(() => {
+        setIsPopup(true);
+      }, 400);
+    }, 300);
+  };
+  
 
   return (
     <section className="w-full h-screen">
       {isWelcomePage && <WelcomePage setIsWelcomePage={setIsWelcomePage} />}
-      <div className={`absolute top-28 left-0 right-0 z-10 flex items-center justify-center ${isWelcomePage ? "hidden" : ""}`}>
-        {currentStage && <HomeItems currentStage={currentStage} />}
+      <div className={`absolute top-28 left-0 right-0 z-10 flex items-center justify-center ${isWelcomePage && "hidden"}`}>
+        {currentStage && (
+          <div className={`transition-all duration-150 ease-in-out ${isPopup ? "opacity-100" : "opacity-0"}`}>
+            <HomeItems currentStage={currentStage} />
+          </div>
+        )}
       </div>
       <Canvas
         className={`w-full h-screen fixed bg-main ${
@@ -159,7 +171,7 @@ const Home = () => {
             rotation={earthRotation}
             isRotating={isRotating}
             setIsRotating={setIsRotating}
-            setCurrentStage={setCurrentStage}
+            setCurrentStage={handleSetCurrentStage}
           />
           <Spaceship
             isRotating={isRotating}
