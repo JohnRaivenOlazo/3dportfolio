@@ -1,9 +1,9 @@
 import { sections } from "../assets/data";
 import About from "../components/sections/About";
-import Contact from "./sections/Contact";
-import Footer from "./sections/Footer";
-import Projects from "./sections/Projects";
-import Technologies from "./sections/Technologies";
+import Contact from "../components/sections/Contact";
+import Footer from "../components/sections/Footer";
+import Projects from "../components/sections/Projects";
+import Technologies from "../components/sections/Technologies";
 
 const ContentRight = () => {
   return (

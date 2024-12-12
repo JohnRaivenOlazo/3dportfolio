@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import StarsCanvas from "../components/canvas/StarsCanvas";
 import GlareEffect from "../components/canvas/GlareEffect";
 import transition from "./transition";
-import ContentLeft from "../components/ContentLeft";
-import ContentRight from "../components/ContentRight";
+import ContentLeft from "./ContentLeft";
+import ContentRight from "./ContentRight";
 
 const About = () => {
   const [activeSection, setActiveSection] = useState("");

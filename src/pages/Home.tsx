@@ -1,7 +1,6 @@
 import { Suspense, useState, useEffect, useRef } from "react";
 import { Canvas } from "@react-three/fiber";
 import { useSpring } from "@react-spring/three";
-import Loader from "../components/Loader";
 import Earth from "../models/Earth.tsx";
 import Sky from "../models/Sky";
 import Spaceship from "../models/Spaceship";
@@ -10,6 +9,7 @@ import { soundon, soundoff } from "../assets/icons";
 import backgroundMusic from "../assets/wind.mp3";
 import transition from "./transition";
 import Tutorial from "../components/Tutorial";
+import WelcomePage from "./WelcomePage.tsx"
 
 const Home = () => {
   const audioRef = useRef(new Audio(backgroundMusic));
@@ -29,6 +29,7 @@ const Home = () => {
 
   const [isRotating, setIsRotating] = useState(false);
   const [currentStage, setCurrentStage] = useState(null);
+  const [isWelcomePage, setIsWelcomePage] = useState(true);
 
   const adjustSpaceshipForScreenSize = () => {
     let screenScale: number[];
@@ -86,7 +87,7 @@ const Home = () => {
       hideTutorial();
     };
 
-    const handleKeyDown = (event : any) => {
+    const handleKeyDown = (event: any) => {
       if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
         hideTutorial();
       }
@@ -109,7 +110,8 @@ const Home = () => {
 
   return (
     <section className="w-full h-screen">
-      <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+      {isWelcomePage && <WelcomePage setIsWelcomePage={setIsWelcomePage} />}
+      <div className={`absolute top-28 left-0 right-0 z-10 flex items-center justify-center ${isWelcomePage ? "hidden" : ""}`}>
         {currentStage && <HomeItems currentStage={currentStage} />}
       </div>
       <Canvas
@@ -118,7 +120,7 @@ const Home = () => {
         }`}
         camera={{ near: 0.1, far: 1000 }}
       >
-        <Suspense fallback={<Loader />}>
+        <Suspense>
           <directionalLight
             color="#fff"
             position={[50, 50, 50]}
@@ -127,7 +129,11 @@ const Home = () => {
           />
           <ambientLight color="#666" intensity={0.2} />
           <hemisphereLight color="#fff" groundColor="#444444" intensity={0.8} />
-          <Sky rotation={[-0.3, 0, 0]} position={[0,0,-90]} isRotating={isRotating} />
+          <Sky
+            rotation={[-0.3, 0, 0]}
+            position={[0, 0, -90]}
+            isRotating={isRotating}
+          />
           <Earth
             scale={earthScale}
             position={earthPosition}
@@ -136,14 +142,13 @@ const Home = () => {
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
           />
-            <Spaceship
-              isRotating={isRotating}
-              setIsRotating={setIsRotating}
-              scale={spaceshipScale}
-              position={position}
-              rotation={rotation}
-            />
-        
+          <Spaceship
+            isRotating={isRotating}
+            setIsRotating={setIsRotating}
+            scale={spaceshipScale}
+            position={position}
+            rotation={rotation}
+          />
         </Suspense>
       </Canvas>
 
