@@ -31,6 +31,12 @@ const Home = () => {
   const [currentStage, setCurrentStage] = useState(null);
   const [isWelcomePage, setIsWelcomePage] = useState(true);
 
+
+  useEffect(() => {
+  setIsPlaying(true);
+  audioRef.current.play();
+  }, [isWelcomePage]);
+
   const adjustSpaceshipForScreenSize = () => {
     let screenScale: number[];
     let screenPosition = isRotating ? [0.3, -1.5, 0] : [0, -1.5, 1];
@@ -82,31 +88,43 @@ const Home = () => {
         setShowTutorial(false);
       }, 2000);
     };
-
+  
+    let canHide = false;
+  
     const handleClick = () => {
-      hideTutorial();
+      if (canHide) {
+        hideTutorial();
+      }
     };
-
+  
     const handleKeyDown = (event: any) => {
-      if (event.key === "ArrowLeft" || event.key === "ArrowRight") {
+      if (canHide && (event.key === "ArrowLeft" || event.key === "ArrowRight")) {
+        hideTutorial();
+      }
+    };
+  
+    const handleTouchStart = () => {
+      if (canHide) {
         hideTutorial();
       }
     };
 
-    const handleTouchStart = () => {
-      hideTutorial();
-    };
-
+    const delayTimeout = setTimeout(() => {
+      canHide = true;
+    }, 3000);
+  
     window.addEventListener("click", handleClick);
     window.addEventListener("keydown", handleKeyDown);
     window.addEventListener("touchstart", handleTouchStart);
-
+  
     return () => {
+      clearTimeout(delayTimeout);
       window.removeEventListener("click", handleClick);
       window.removeEventListener("keydown", handleKeyDown);
       window.removeEventListener("touchstart", handleTouchStart);
     };
   }, []); // Empty dependency array ensures the effect runs only once
+  
 
   return (
     <section className="w-full h-screen">
