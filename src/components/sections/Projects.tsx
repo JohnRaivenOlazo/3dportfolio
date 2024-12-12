@@ -31,8 +31,8 @@ const Projects = () => {
         <p className="text-sm lg:text-md text-gray-400 max-w-2xl leading-relaxed tracking-tight">
           Welcome to my projects section! Each project showcases my{" "}
           <span className="text-white">skills</span>,{" "}
-          <span className="text-white">creativity</span>, and{" "}
-          <span className="text-white">dedication</span> to delivering high-quality work.{" "}
+          creativity, and{" "}
+          dedication to delivering high-quality work.{" "}
           <span className="text-white">Explore</span> the projects I've
           developed.
         </p>
