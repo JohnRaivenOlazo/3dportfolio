@@ -86,7 +86,7 @@ const Home = () => {
       setIsMove(true);
       setTimeout(() => {
         setShowTutorial(false);
-      }, 2000);
+      }, 3000);
     };
   
     let canHide = false;
@@ -109,21 +109,23 @@ const Home = () => {
       }
     };
 
-    const delayTimeout = setTimeout(() => {
-      canHide = true;
-    }, 3000);
+    if (!isWelcomePage) {
+      const delayTimeout = setTimeout(() => {
+        canHide = true;
+      }, 2000);
   
-    window.addEventListener("click", handleClick);
-    window.addEventListener("keydown", handleKeyDown);
-    window.addEventListener("touchstart", handleTouchStart);
+      window.addEventListener("click", handleClick);
+      window.addEventListener("keydown", handleKeyDown);
+      window.addEventListener("touchstart", handleTouchStart);
   
-    return () => {
-      clearTimeout(delayTimeout);
-      window.removeEventListener("click", handleClick);
-      window.removeEventListener("keydown", handleKeyDown);
-      window.removeEventListener("touchstart", handleTouchStart);
-    };
-  }, []); // Empty dependency array ensures the effect runs only once
+      return () => {
+        clearTimeout(delayTimeout);
+        window.removeEventListener("click", handleClick);
+        window.removeEventListener("keydown", handleKeyDown);
+        window.removeEventListener("touchstart", handleTouchStart);
+      };
+    }
+  }, [isWelcomePage]);
   
 
   return (
