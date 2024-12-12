@@ -16,6 +16,7 @@ const Home = () => {
   audioRef.current.volume = 0.03;
   audioRef.current.loop = true;
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hoverRotation, setHoverRotation] = useState([]);
 
   useEffect(() => {
     if (isPlaying) {
@@ -36,10 +37,22 @@ const Home = () => {
   audioRef.current.play();
   }, [isWelcomePage]);
 
+  useEffect(() => {
+    if (!isRotating) {
+      const interval = setInterval(() => {
+        setHoverRotation((prev) => {
+          const newZ = prev[2] === 0.5 ? 0.53 : 0.5;
+          return [-0.7, 1.5, newZ];
+        });
+      }, 500);
+      return () => clearInterval(interval);
+    }
+  }, []);
+
   const adjustSpaceshipForScreenSize = () => {
     let screenScale: number[];
     let screenPosition = isRotating ? [0.3, -1.5, 0] : [0, -1.5, 1];
-    let rotation = isRotating ? [-0.7, 1.5, -0.5] : [-0.7, 1.5, 0.5];
+    let rotation = isRotating ? [-0.7, 1.5, -0.5] : hoverRotation;
 
     if (window.innerWidth < 768) {
       screenScale = [0.2, 0.2, 0.2];
@@ -73,7 +86,7 @@ const Home = () => {
   const { rotation, position } = useSpring({
     rotation: spaceshipRotation,
     position: isWelcomePage ? [0, -4, 1] : spaceshipPosition,
-    config: { mass: 1, tension: 100, friction: 26 },
+    config: { mass: 2, tension: 100, friction: 26 },
   });
 
   const [showTutorial, setShowTutorial] = useState(true);
