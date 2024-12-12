@@ -1,10 +1,19 @@
+import { useRef } from "react";
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { sections } from "../assets/data";
+import { useInView, motion } from "framer-motion";
 
 const ContentLeft = ({ activeSection }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true });
 
   return (
-    <>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0 }}
+      animate={inView ? { opacity: 1 } : {}}
+      transition={{ duration: 0.5 }}
+    >
       <p className="text-xl sm:text-2xl font-medium tracking-tighter">
         <span className="text-white">Hi, I'm Raiven!</span>
       </p>
@@ -53,7 +62,7 @@ const ContentLeft = ({ activeSection }) => {
           <FaFacebook className="w-full h-full" />
         </a>
       </div>
-    </>
+    </motion.div>
   );
 };
 
