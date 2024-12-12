@@ -48,7 +48,7 @@ const About = () => {
       <StarsCanvas />
       <GlareEffect />
       <div className="sub-container px-8 md:px-0 lg:px-0 flex flex-col md:flex-row items-start justify-center h-full overflow-hidden sm:overflow-y-scroll relative sm:sticky">
-        <div className="text-gray-50 p-4 md:p-8 rounded-lg mb-4 md:mb-0 w-full md:w-[56%] lg:w-auto sticky top-24 left-auto leading-none text-center md:text-start">
+        <div className="text-gray-50 p-4 md:p-8 rounded-lg mb-4 md:mb-0 w-full md:w-[56%] lg:w-auto relative lg:sticky top-24 left-auto leading-none text-center md:text-start">
           <ContentLeft activeSection={activeSection} />
         </div>
 
