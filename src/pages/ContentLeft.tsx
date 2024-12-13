@@ -14,7 +14,7 @@ const ContentLeft = ({ activeSection }) => {
       animate={inView ? { opacity: 1 } : {}}
       transition={{ duration: 0.5 }}
     >
-      <p className="text-xl sm:text-2xl font-medium tracking-tighter">
+      <p className="text-xl sm:text-2xl font-semibold tracking-tighter -mb-1">
         <span className="text-white">Hi, I'm Raiven!</span>
       </p>
       <p className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-gray-300 via-gray-500 to-gray-700">

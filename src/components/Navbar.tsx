@@ -31,7 +31,7 @@ const Navbar = () => {
             />
             ) : (
             <p
-              className="bg-clip-text text-transparent bg-gradient-to-r from-teal-200 via-teal-300 to-teal-500 transform hover:-translate-y-0.5 hover:scale-105 transition-all duration-300"
+              className="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 via-gray-300 to-gray-500 transform hover:-translate-y-0.5 hover:scale-105 transition-all duration-300"
             >
               <span className="sm:inline-block hidden">John</span> Raiven{' '}
               <span className="sm:inline-block hidden">Olazo</span>
