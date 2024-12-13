@@ -63,11 +63,11 @@ const Earth = (props : any) => {
   const handleKeyDown = (e: any) => {
     if(e.key === "ArrowLeft") {
       if(!isRotating) setIsRotating(true);
-      earthRef.current.rotation.y += 0.010 * Math.PI;
+      earthRef.current.rotation.y += 0.009 * Math.PI;
       rotationSpeed.current = 0.008;
     }else if (e.key === "ArrowRight") {
       if(!isRotating) setIsRotating(true);
-      earthRef.current.rotation.y -= 0.010 * Math.PI;
+      earthRef.current.rotation.y -= 0.009 * Math.PI;
       rotationSpeed.current = -0.008;
     }
   }
