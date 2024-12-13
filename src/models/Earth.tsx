@@ -53,7 +53,7 @@ const Earth = (props : any) => {
       
       const delta = (clientX - lastX.current) / viewport.width;
       
-      earthRef.current.rotation.y += delta * 0.004 * Math.PI;
+      earthRef.current.rotation.y += delta * 0.003 * Math.PI;
       lastX.current = clientX;
       rotationSpeed.current = delta * 0.004 * Math.PI;
     }
