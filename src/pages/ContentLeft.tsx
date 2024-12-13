@@ -14,13 +14,10 @@ const ContentLeft = ({ activeSection }) => {
       animate={inView ? { opacity: 1 } : {}}
       transition={{ duration: 0.5 }}
     >
-      <p className="text-xl sm:text-2xl font-semibold tracking-tighter -mb-1">
-        <span className="text-white">Hi, I'm Raiven!</span>
-      </p>
-      <p className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-gray-300 via-gray-500 to-gray-700">
+      <p className="text-4xl lg:text-5xl font-black tracking-wide sm:tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-gray-300 via-gray-500 to-gray-700">
         Development
       </p>
-      <p className="text-white text-2xl sm:text-3xl font-extrabold">
+      <p className="text-white text-lg md:text-xl lg:text-2xl font-bold">
         My passion and profession.
       </p>
       <div className="mt-4 sm:mt-6 flex items-center gap-3 flex-wrap text-xs sm:text-sm justify-center md:justify-start cursor-pointer">
@@ -42,7 +39,7 @@ const ContentLeft = ({ activeSection }) => {
             return (
             <a href={`#${section.id}`} key={section.id}>
               <li className={`flex items-center gap-2 transition-colors duration-300 hover:text-white ${activeSection === section.id && "text-white"}`}>
-                <span className={`h-[0.5px] bg-white transition-all duration-300 ease ${activeSection === section.id ? "w-20" : "w-10"}`} />
+                <span className={`h-[0.5px] bg-white transition-all duration-300 ease-in-out ${activeSection === section.id ? "w-20" : "w-10"}`} />
                 <span>{section.label}</span>
               </li>
             </a>

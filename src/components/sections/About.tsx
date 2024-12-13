@@ -1,7 +1,7 @@
 const About = () => {
   return (
-    <div className="text-gray-400 text-sm">
-      <h2 className="text-3xl sm:text-4xl font-bold text-gray-50 pb-6 sm:pb-8">Who Am I.</h2>
+    <div className="text-gray-400 text-sm mb-10">
+      <h2 className="text-2xl sm:text-3xl font-bold text-gray-50 pb-4 sm:pb-6">Who Am I.</h2>
       <p className="mb-4">
         I’m a full stack developer who loves making apps that are not just <span className="text-white">functional</span> but also fun and easy to use. I’m turning ideas into something cool and <span className="text-white">interactive</span>.
       </p>

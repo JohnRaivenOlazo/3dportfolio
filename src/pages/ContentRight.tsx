@@ -25,7 +25,7 @@ const ContentRight = () => {
             <div className="title" id={section.id}>
               {index === sections.length - 1 ? null : (
                 <div className="pt-36 pb-14 group text-white inline-block uppercase" id={section.id}>
-                  <p className="tracking-[0.2em] group-hover:tracking-tighter transition-all duration-300 ease font-bold">
+                  <p className="tracking-[0.2em] group-hover:tracking-tighter transition-all duration-300 ease text-sm font-bold text-center">
                     {section.label}
                   </p>
                   <hr className="max-w-0 group-hover:max-w-full transition-all duration-300 ease" />

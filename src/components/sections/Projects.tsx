@@ -14,19 +14,16 @@ const Projects = () => {
     <div className="w-full h-auto flex flex-col justify-start relative text-white">
       <div className="text-center lg:text-left">
         <h1 className="text-2xl md:text-3xl text-gray-400 mb-4">{`<`}</h1>
-        <h1 className="mb-2 text-3xl md:text-4xl">
+        <h1 className="mb-2 text-2xl sm:3xl font-bold">
           <TypewriterComponent
             options={{
-              strings: ["Web", "Mobile", "AI"],
+              strings: ["Web.", "Mobile.", "AI."],
               autoStart: true,
               loop: true,
               deleteSpeed: 100,
               delay: 120,
             }}
           />
-        </h1>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-          Projects.
         </h1>
         <p className="text-sm lg:text-md text-gray-400 max-w-2xl leading-relaxed tracking-tight">
           Welcome to my projects section! Each project showcases my{" "}

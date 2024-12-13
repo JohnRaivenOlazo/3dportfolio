@@ -7,7 +7,7 @@ const Technologies = () => {
 
   return (
       <div className="text-white">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-3">My Tech Stack.</h2>
+        <h2 className="text-2xl sm:3xl font-bold mb-3">My Tech Stack.</h2>
         <p className="text-gray-400 mb-10 text-sm">
           Here's a <span className="text-gray-100">selection</span> of tools and technologies I know and love working with.
         </p>
