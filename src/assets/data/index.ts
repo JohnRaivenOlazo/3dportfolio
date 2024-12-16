@@ -16,13 +16,14 @@ const projects = [
     // }
 ]
 
-import { javascript, typescript, python, java, lua, react, nextjs, nodejs, mongodb, html, css, sass, tailwindcss, bootstrap } from "../icons";
+import { javascript, typescript, python, java, php, lua, react, nextjs, nodejs, mongodb, html, css, sass, tailwindcss, bootstrap } from "../icons";
 
 const technologies = [
   { name: "JavaScript", icon: javascript },
   { name: "TypeScript", icon: typescript },
   { name: "Python", icon: python },
   { name: "Java", icon: java },
+  { name: "Php", icon: php },
   { name: "Lua", icon: lua },
 
   { name: "React", icon: react },

@@ -2,6 +2,7 @@ import javascript from './javascript.svg'
 import typescript from './typescript.svg'
 import python from './python.svg'
 import java from './java.svg'
+import php from './php.svg'
 import lua from './lua.svg'
 import css from './css.svg'
 import express from './express.svg'
@@ -31,6 +32,7 @@ export {
     typescript,
     python,
     java,
+    php,
     lua,
     css,
     express,

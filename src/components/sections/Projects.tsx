@@ -26,13 +26,11 @@ const Projects = () => {
           />
         </h1>
         <p className="text-sm lg:text-md text-gray-400 max-w-2xl leading-relaxed tracking-tight">
-          Welcome to my projects section! Each project showcases my{" "}
-          <span className="text-gray-200">skills</span>,{" "}
-          creativity, and{" "}
-          dedication to delivering high-quality work.{" "}
-          <span className="text-gray-200">Explore</span> the projects I've
-          developed.
-        </p>
+  Welcome to my projects! Here, you’ll find work that highlights my{" "}
+  <span className="text-gray-200">skills</span> and{" "}
+  <span className="text-gray-200">creativity</span>, showcasing my commitment to quality. Take a look at what I’ve built.
+</p>
+
         <h1 className="text-2xl md:text-3xl text-gray-400 mt-4 mb-6">{`/>`}</h1>
       </div>
 
