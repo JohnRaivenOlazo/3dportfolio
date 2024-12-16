@@ -10,12 +10,3 @@ const WelcomeScreen = ({ onEnter }) => {
   };
 
 export default WelcomeScreen
-
-
-// const [showIntro, setShowIntro] = useState(true);
-
-// const handleEnter = () => {
-//   setShowIntro(false);
-//   setIsPlaying(true);
-//   audioRef.current.play();
-// };

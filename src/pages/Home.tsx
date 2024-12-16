@@ -51,7 +51,7 @@ const Home = () => {
 
   const adjustSpaceshipForScreenSize = () => {
     let screenScale: number[];
-    let screenPosition = isRotating ? [0.3, -1.5, 0] : [0, -1.5, 1];
+    let screenPosition = isRotating ? [0.3, -1.5, 0] : [-0.06, -1.5, 1];
     let rotation = isRotating ? [-0.7, 1.5, -0.5] : hoverRotation;
 
     if (window.innerWidth < 768) {

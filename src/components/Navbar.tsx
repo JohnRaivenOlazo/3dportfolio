@@ -27,7 +27,7 @@ const Navbar = () => {
           className={`backdrop-blur-lg px-2 py-1 rounded-lg transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
         >
             {isHome ? (
-            <img src={logo} alt="logo" className="transition-transform duration-300 w-full max-w-xs h-10 sm:h-12 hover:scale-110"
+            <img src={logo} alt="logo" className="transition-transform duration-300 w-full max-w-xs h-10 sm:h-14 hover:scale-110 hover:"
             />
             ) : (
             <p
@@ -43,7 +43,7 @@ const Navbar = () => {
       <nav className="relative flex justify-center items-center space-x-4 bg-transparent px-4 py-2 text-md md:text-xl backdrop-blur-3xl rounded-lg p-2">
         <p className="relative group">
           <NavLink to="/about" className="text-gray-400 hover:text-white transition-colors duration-100 ease-in">
-            <span className="font-bold inline-block hover:-translate-y-0.5 transition-all text-xl sm:text-2xl">About</span>
+            <span className="font-bold inline-block hover:-translate-y-0.5 transition-all text-lg sm:text-xl">About</span>
             <span className="absolute left-1/2 transform -translate-x-1/2 bottom-1 w-0 h-0.5 rounded-sm bg-gray-400 -z-10 group-hover:w-full transition-all" />
           </NavLink>
         </p>

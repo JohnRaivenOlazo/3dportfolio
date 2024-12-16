@@ -31,7 +31,7 @@ const items = {
         />
     ),
     3: (
-        <div className="glassmorphism text-gray-100 sm:text-xl leading-4 sm:leading-5 text-center py-2 px-8">
+        <div className="glassmorphism text-gray-100 sm:text-xl leading-5 sm:leading-6 text-center py-2 px-8 mx-4">
         Hi, I'm <strong className="font-bold text-white">John Raiven Olazo</strong>. <br/>
         A <strong className='text-white'>Full-Stack Developer</strong> based in the <a href="https://www.google.com/search?q=Philippines" target="_blank" className="underline font-semibold text-sky-300">Philippines</a>.
     </div>

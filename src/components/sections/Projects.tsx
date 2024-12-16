@@ -21,16 +21,16 @@ const Projects = () => {
               autoStart: true,
               loop: true,
               deleteSpeed: 100,
-              delay: 120,
+              delay: 150,
             }}
           />
         </h1>
         <p className="text-sm lg:text-md text-gray-400 max-w-2xl leading-relaxed tracking-tight">
           Welcome to my projects section! Each project showcases my{" "}
-          <span className="text-white">skills</span>,{" "}
+          <span className="text-gray-200">skills</span>,{" "}
           creativity, and{" "}
           dedication to delivering high-quality work.{" "}
-          <span className="text-white">Explore</span> the projects I've
+          <span className="text-gray-200">Explore</span> the projects I've
           developed.
         </p>
         <h1 className="text-2xl md:text-3xl text-gray-400 mt-4 mb-6">{`/>`}</h1>
@@ -65,7 +65,7 @@ const Projects = () => {
             >
               <Link to={`../${project.title}`}>
               <img src={project.image} alt={project.title} className="w-full h-auto object-contain rounded-xl mb-4"/>
-              <h2 className="text-xl md:text-2xl font-bold">{project.title}</h2>
+              <h2 className="text-lg md:text-xl font-bold">{project.title}</h2>
               <p className="text-gray-200 mb-2 text-sm uppercase">Category: {project.category}</p>
               <p className="text-gray-400 text-xs">{project.description}</p>
               </Link>
