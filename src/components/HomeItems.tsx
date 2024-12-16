@@ -18,14 +18,14 @@ const Info = (props: any) => {
 const items = {
     1: (    
         <Info 
-        text = "Throughout my college journey, I’ve had the opportunity to lead innovative projects, handling everything from building frontend and backend to integrating databases, managing cloud services, and handling deployments. I’ve developed a strong foundation in web development and AI, especially in Computer Vision. With hands-on experience in a variety of programming languages and frameworks."
+        text = "I started programming at 16 as a self-taught developer. My first language was Lua, and at 17, I created a script that generated $1000 in revenue, sparking my passion for coding and continuous learning. The rest is history."
         link="/about#projects"
         btnText="View Projects"
         />
     ),
     2: (
         <Info 
-        text= "Have a project in mind? I'm always open to new opportunities and collaborations. Feel free to reach out to me."
+        text= "Got a project idea? I’m always open to new opportunities and collaborations."
         link="/about#contact"
         btnText="Let's Connect"
         />
@@ -38,7 +38,7 @@ const items = {
     ),
     4: (
         <Info 
-        text="I began my programming journey at the age of 16. As a self-taught developer, I have a passion for continuous learning and innovation. My first programming language was Lua, and I developed a script that generated $1000 in revenue within a year at the age of 17, which further fueled my enthusiasm for coding."
+        text="Throughout my college journey, I’ve led innovative projects, working on everything from building frontend and backend components to integrating databases, managing cloud services, and handling deployments. I’ve built a strong foundation in web development and AI, with a particular focus on computer vision. My hands-on experience spans various programming languages and frameworks, giving me a well-rounded skill set in modern development."
         link="/about#about"
         btnText="Learn More"
         />
