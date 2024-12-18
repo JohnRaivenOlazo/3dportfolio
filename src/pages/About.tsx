@@ -44,7 +44,7 @@ const About = () => {
   }, []);
   
   return (
-    <div className="main-container max-h-screen overflow-x-hidden lg:h-screen">
+    <div className="main-container max-h-screen overflow-x-hidden">
       <StarsCanvas />
       <GlareEffect />
       <div className="sub-container relative flex flex-col justify-start px-8 h-full overflow-hidden lg:px-0 lg:flex-row lg:justify-end lg:overflow-y-scroll">

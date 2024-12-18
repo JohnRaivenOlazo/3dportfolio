@@ -1,7 +1,7 @@
 import { sections } from "../assets/data";
 import About from "../components/sections/About";
 import Contact from "../components/sections/Contact";
-import Footer from "../components/sections/Footer";
+// import Footer from "../components/sections/Footer";
 import Projects from "../components/sections/Projects";
 import Technologies from "../components/sections/Technologies";
 import { motion, useInView } from "framer-motion";
@@ -41,8 +41,8 @@ const ContentRight = () => {
                     return <Technologies />;
                   case "contact":
                     return <Contact />;
-                  default:
-                    return <Footer />;
+                  // default:
+                  //   return <Footer />;
                 }
               })()}
             </div>
