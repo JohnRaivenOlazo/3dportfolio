@@ -291,9 +291,9 @@ body:has(.card[data-color="green"]:hover) {
 .glare {
   position: fixed;
   overflow: hidden;
-  width: 75vw;
-  height: 150vh;
-  background: radial-gradient(circle, rgba(27, 0, 133, 0.3) 0%, rgba(22, 0, 109, 0) 70%);
+  width: 170%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(27, 0, 133, 0.3) 0%, rgba(22, 0, 109, 0) 50%);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
