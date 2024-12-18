@@ -44,15 +44,15 @@ const About = () => {
   }, []);
   
   return (
-    <div className="main-container relative min-h-screen max-h-screen overflow-x-hidden overflow-y-scroll bg-main sm:h-screen sm:overflow-hidden">
+    <div className="main-container max-h-screen overflow-x-hidden lg:h-screen">
       <StarsCanvas />
       <GlareEffect />
-      <div className="sub-container relative flex flex-col justify-center px-8 h-full overflow-hidden md:px-0 md:flex-row md:justify-end md:pr-5 lg:pr-20 sm:overflow-y-scroll">
-        <div className="relative top-24 p-4 mb-4 w-full text-center md:fixed md:left-12 md:top-1/2 md:-translate-y-1/2 md:p-8 md:mb-0 md:w-auto md:text-start lg:left-20 lg:top-1/2 lg:-translate-y-1/2 lg:w-auto">
+      <div className="sub-container relative flex flex-col justify-start px-8 h-full overflow-hidden lg:px-0 lg:flex-row lg:justify-end lg:overflow-y-scroll">
+        <div className="relative top-0 translate-y-1/2 p-4 mb-4 w-full text-center lg:fixed lg:p-8 lg:mb-0 lg:text-start lg:left-20 lg:top-1/2 lg:-translate-y-1/2 lg:w-auto">
           <ContentLeft activeSection={activeSection} />
         </div>
 
-        <div className="pb-14 w-full h-full text-gray-400 md:w-[40%] lg:ml-20">
+        <div className="pb-14 w-full h-full text-gray-400 lg:w-[40%] lg:mr-20">
           <ContentRight />
         </div>
       </div>

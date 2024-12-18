@@ -9,6 +9,10 @@
   --green-rgb: 125 161 35;
 }
 
+body {
+  background: rgb(3,0,15, 1);
+}
+
 .main-container::-webkit-scrollbar,
 .right-side::-webkit-scrollbar,
 .container::-webkit-scrollbar {

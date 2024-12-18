@@ -159,7 +159,7 @@ const Home = () => {
         )}
       </div>
       <Canvas
-        className={`w-full h-screen fixed bg-main ${
+        className={`w-full h-screen fixed ${
           isRotating ? "cursor-grabbing" : "cursor-grab"
         }`}
         camera={{ near: 0.1, far: 1000 }}
