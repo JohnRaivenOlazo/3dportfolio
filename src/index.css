@@ -11,6 +11,7 @@
 
 body {
   background: rgb(3,0,15, 1);
+  overflow: hidden;
 }
 
 .main-container::-webkit-scrollbar,
