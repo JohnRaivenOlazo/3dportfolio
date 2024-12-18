@@ -19,11 +19,7 @@ const GlareEffect = () => {
     return (
         <div
             className="glare"
-            style={{
-                position: "fixed",        
-                left: `${cursorPosition.x}px`,
-                top: `${cursorPosition.y}px`,
-            }}
+            style={{ left: `${cursorPosition.x}px`, top: `${cursorPosition.y}px`}}
         ></div>
     );
 };

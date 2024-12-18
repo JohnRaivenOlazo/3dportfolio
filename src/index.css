@@ -14,19 +14,16 @@ body {
   overflow: hidden;
 }
 
-.main-container::-webkit-scrollbar,
 .right-side::-webkit-scrollbar,
 .container::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
-.main-container::-webkit-scrollbar-track,
 .right-side::-webkit-scrollbar-track,
 .container::-webkit-scrollbar-track {
   background: rgb(3,0,15,1);
 }
 
-.main-container::-webkit-scrollbar-thumb,
 .right-side::-webkit-scrollbar-thumb,
 .container::-webkit-scrollbar-thumb {
   background: rgba(27, 0, 133, 0.3);
@@ -292,10 +289,10 @@ body:has(.card[data-color="green"]:hover) {
 }
 
 .glare {
-  position: absolute;
+  position: fixed;
   overflow: hidden;
-  width: 1000px;
-  height: 1000px;
+  width: 75vw;
+  height: 150vh;
   background: radial-gradient(circle, rgba(27, 0, 133, 0.3) 0%, rgba(22, 0, 109, 0) 70%);
   border-radius: 50%;
   pointer-events: none;

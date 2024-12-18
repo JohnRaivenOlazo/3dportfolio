@@ -44,19 +44,18 @@ const About = () => {
   }, []);
   
   return (
-    <div className="main-container h-full max-h-screen overflow-x-hidden">
+    <>
       <StarsCanvas />
       <GlareEffect />
-      <div className="sub-container flex flex-col justify-start px-8 overflow-hidden lg:px-0 lg:flex-row lg:justify-end lg:overflow-y-scroll">
-        <div className="relative top-0 translate-y-1/2 p-4 mb-4 w-full text-center lg:fixed lg:p-8 lg:mb-0 lg:text-start lg:left-20 lg:top-1/2 lg:-translate-y-1/2 lg:w-auto">
+      <div className="sub-container flex flex-col justify-start px-8 overflow-x-hidden max-h-screen lg:px-0 lg:flex-row lg:justify-center lg:gap-40">
+        <div className="relative top-0 translate-y-1/2 p-4 mb-4 w-full text-center lg:p-8 lg:sticky lg:mb-0 lg:text-start lg:translate-y-24 lg:w-auto m-0 lg:ml-12">
           <ContentLeft activeSection={activeSection} />
         </div>
-
-        <div className="pb-14 w-full text-gray-400 lg:w-[40%] lg:mr-20">
+        <div className="pb-14 w-full lg:w-[35rem] m-0 lg:mr-20">
           <ContentRight />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

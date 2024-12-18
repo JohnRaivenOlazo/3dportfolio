@@ -1,6 +1,5 @@
 import { NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import logo from '/logo-64.png';
 
 const Navbar = () => {
   const location = useLocation();
@@ -23,16 +22,9 @@ const Navbar = () => {
         to={location.pathname === '/about' || location.pathname === '/' ? '/' : '/about#project-category'}
         className="text-2xl font-bold hover:text-teal-300 transition-all duration-300 relative"
       >
-        <div
-          className={`backdrop-blur-lg px-2 py-1 rounded-lg transition-opacity duration-300 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}
-        >
-            {isHome ? (
-            <img src={logo} alt="logo" className="transition-transform duration-300 w-full max-w-xs h-10 sm:h-14 hover:scale-110 hover:"
-            />
-            ) : (
-            <p
-              className="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 via-gray-300 to-gray-500 transform hover:-translate-y-0.5 hover:scale-105 transition-all duration-300"
-            >
+        <div className={`backdrop-blur-lg px-2 py-1 rounded-lg transition-opacity duration-200 ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
+            {!isHome && (
+            <p className="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 via-gray-300 to-gray-500 transform hover:-translate-y-0.5 hover:scale-105 transition-all duration-300">
               <span className="sm:inline-block hidden">John</span> Raiven{' '}
               <span className="sm:inline-block hidden">Olazo</span>
             </p>
