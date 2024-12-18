@@ -45,13 +45,13 @@ const WelcomePage = ({ setIsWelcomePage }: { setIsWelcomePage: Function }) => {
         </motion.p>
       </motion.div>
 
-      <button className={`relative top-0 w-60 bg-gray-400 h-10 sm:h-12 rounded-full text text-white text-center group hover:scale-105 transition-all ease-in
+      <button className={`relative top-0 w-60 rounded-full h-10 sm:h-12 text text-white text-center group hover:scale-110 transition-all ease-in
       ${loading ? "cursor-not-allowed opacity-50" : "cursor-pointer"}`}
         disabled={loading}
         onClick={handleExit}
       >
-        <div className="absolute top-0 bg-teal-500 group-hover:bg-teal-600 h-10 sm:h-12 rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
-        <p className="absolute inset-0 flex items-center justify-center text-xl sm:text-2xl">{loading ? "Loading..." : <>Explore World <FaArrowRight className="ml-1 sm:ml-2 h-4 w-6 inline-block transition-all group-hover:translate-x-2"/></>}</p>
+        <div className="absolute top-0 glassmorphism h-10 sm:h-12 transition-all duration-300" style={{ width: `${progress}%` }} />
+        <p className="absolute inset-0 flex items-center justify-center text-lg transition-all group-hover:tracking-wide sm:text-xl">{loading ? "Loading..." : <>Explore World <FaArrowRight className="ml-1 sm:ml-2 h-4 w-6 inline-block transition-all group-hover:translate-x-2"/></>}</p>
       </button>
     </motion.div>
   );
