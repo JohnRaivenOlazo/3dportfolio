@@ -9,7 +9,7 @@ import { soundon, soundoff } from "../assets/icons";
 import backgroundMusic from "../assets/wind.mp3";
 import transition from "./transition";
 import Tutorial from "../components/Tutorial";
-import WelcomePage from "./WelcomePage.tsx"
+import WelcomePage from "../components/WelcomePage.tsx";
 
 const Home = () => {
   const audioRef = useRef(new Audio(backgroundMusic));
